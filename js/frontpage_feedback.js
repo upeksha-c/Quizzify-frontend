@@ -1,10 +1,11 @@
+import { BACKEND_URL } from "./config.js";
 const mainDivFeedback = document.querySelector('.row1')
 
 //url to get feedback
-const BACKEND_URL_FEEDBACK = "http://localhost:3001/feedback"
+const BACKEND_URL_FEEDBACK = BACKEND_URL + "/feedback"
 
 //url to get images
-const BACKEND_URL_FEEDBACK_IMAGES = "http://localhost:3001/feedback/pic"
+const BACKEND_URL_FEEDBACK_IMAGES = BACKEND_URL + "/feedback/pic"
 
 //function to fetch images from backend 
 const getImagesBackend = async(url) => {
