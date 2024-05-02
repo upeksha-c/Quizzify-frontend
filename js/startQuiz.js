@@ -1,3 +1,4 @@
+import { BACKEND_URL } from "./config.js";
 // Create comments for all functions
 // Insert categories to dropdown 
 let selectedCategory = '';
@@ -22,7 +23,7 @@ function createCategoryOption(value, id) {
     return op;
 }
 
-const BACKEND_URL_CATEGORY = "http://localhost:3001/categories";
+const BACKEND_URL_CATEGORY = BACKEND_URL + "/categories";
 
 // Fetch categories from backend and assign to another function to create dropdown options
 const getCategoriesBackend = async(url) => {
@@ -60,7 +61,7 @@ function startQuiz() {
     const firstDiv = document.createElement("div");
     content2.appendChild(firstDiv);
 
-    const BACKEND_URL = "http://localhost:3001/questions?category=" + selectedCategory;
+    const BACKEND_URL_QUE = BACKEND_URL + "/questions?category=" + selectedCategory;
     let answerArray = [];
     let currentElement = 0;
     let score = 0;
@@ -199,5 +200,5 @@ const createNextButtonElement = () => {
     };
 
     // Start the quiz
-    getQuestionsFromBackend(BACKEND_URL);
+    getQuestionsFromBackend(BACKEND_URL_QUE);
 }

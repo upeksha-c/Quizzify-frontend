@@ -1,7 +1,8 @@
+import { BACKEND_URL } from "./config.js";
 //catch div element
 let carouselDiv = document.querySelector('.carousel-inner')
 
-const BACKEND_URL = "http://localhost:3001/carousel"
+const BACKEND_URL_CATE = BACKEND_URL + "/carousel"
 
 //fetch categories from backend and assign to another fuction to create dropdown options
 const getCategoriesBackend = async(url) => {
@@ -41,7 +42,7 @@ const getCategoriesBackend = async(url) => {
         alert("Error retrieving questions: " + error.message);
     }
 }
-getCategoriesBackend(BACKEND_URL)
+getCategoriesBackend(BACKEND_URL_CATE)
 
 //function to create card
 function createCard(imageSource,cateName,cateDescription){

@@ -1,1 +1,1 @@
-export const BACKEND_URL = 'http://localhost:3001'
+export const BACKEND_URL = 'https://quizzify-server-y5sk.onrender.com'
